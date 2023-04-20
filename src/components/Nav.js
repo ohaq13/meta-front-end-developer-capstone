@@ -1,4 +1,4 @@
-//import { Outlet, Link } from "react-router-dom"
+import { Outlet, Link } from "react-router-dom"
 import { useState } from 'react';
 import { FaRegTimesCircle, FaGripLines } from 'react-icons/fa';
 
@@ -14,12 +14,12 @@ export default function Nav() {
         {isOpen ? <FaRegTimesCircle /> : <FaGripLines />}
       </div>
       <nav className={`nav ${isOpen ? 'active' : ''}`} onClick={toggleNav}>
-    {/*    <Link to="/" className="nav-item">HOME</Link>*/}
-        <a href="#" className="nav-item">ABOUT</a>
-        <a href="#" className="nav-item">MENU</a>
-       {/* <Link to="/booking" className="nav-item">RESERVATIONS</Link>*/}
-        <a href="#" className="nav-item">ORDER ONLINE</a>
-        <a href="#" className="nav-item">LOGIN</a>
+        <Link to="/" className="nav-item">HOME</Link>
+        <Link to="/about" className="nav-item">ABOUT</Link>
+        <Link to="/menu" className="nav-item">MENU</Link>
+        <Link to="/booking" className="nav-item">RESERVATIONS</Link>
+        <Link to="/orderonline" className="nav-item">ORDER ONLINE</Link>
+        <Link to="/login" className="nav-item">LOGIN</Link>
       </nav>
       </>
     )
