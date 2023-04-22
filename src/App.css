@@ -50,7 +50,6 @@ label {
 .desc {
 	color: #FFFFFF;
 	font-size: 18px;
-	font-weight: 500;
 	line-height: 21px;
 	letter-spacing: 0em;
 	text-align: left;
@@ -238,11 +237,9 @@ select {
 }
 
 .img-wrapper {
-	right: 2em;
-	max-width: 250px;
-	max-height: 275px;
+	right: 1em;
 	align-self: flex-end;
-	margin-bottom: -1em;
+	margin-bottom: -2em;
 	flex-basis: 1;
 }
 
@@ -356,7 +353,7 @@ select {
 /* Buttons */
 
 .btn,
-.submit {
+.submit {/*
 	background-color: #F4CE14;
 	border: none;
 	outline: none;
@@ -368,7 +365,20 @@ select {
 	letter-spacing: 0em;
 	text-align: center;
 	padding: -.7em;
-	cursor: pointer;
+	cursor: pointer;*/
+  padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background-color: #F4CE14;
+    color: #495E57;
+    font-weight: bold;
+    border: 0.1875rem solid #F4CE14;
+    transition: background, border, color 4.0s;
+
+}
+.btn:hover,
+.submit:hover {
+  border-color: #495E57;
+  border-style: double;
 }
 
 .reserve-btn {
@@ -401,15 +411,38 @@ select {
 		font-size: 16px;
 	}
 
-	.img-wrapper {
-		max-width: 200px;
-		max-height: 260px;
-		align-self: flex-end;
-		margin-bottom: -1em;
-	}
+	
+}
+.double-image {
+  max-height: 18rem;
+  position: relative;
+  top: 4rem;
+  left: 2rem;
 }
 
+.double-image > img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.about-2 {
+  position: absolute;
+  top: -3.5rem;
+  left: 5rem;
+}
 @media (max-width: 800px) {
+
+  .chakra-stack {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
 	nav {
 		display: none;
 	}
@@ -499,7 +532,6 @@ select {
 	}
 
 	.img-wrapper {
-		max-width: 160px;
 	}
 
 	label {
@@ -588,7 +620,6 @@ select {
 	}
 
 	.img-wrapper {
-		max-width: 140px;
 	}
 
 	.hero-desc,
@@ -628,7 +659,6 @@ select {
 	}
 
 	.img-wrapper {
-		max-width: 120px;
 	}
 
 	footer {
