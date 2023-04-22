@@ -6,7 +6,7 @@ import FullScreenSection from './FullScreenSection';
 
 const testimonials = [
   {
-    title: "Bruchetta 1",
+    title: "Person1",
     price: null,
     rating:5,
     description:
@@ -14,7 +14,7 @@ const testimonials = [
     getImageSrc: () => require("../images/r1.png"),
   },
   {
-    title: "Greek Salad 1",
+    title: "Person2",
     price: null,
     rating:2,
     description:
@@ -22,7 +22,7 @@ const testimonials = [
     getImageSrc: () => require("../images/r2.png"),
   },
   {
-    title: "Bruchetta 2",
+    title: "Person3",
     price: null,
     rating:1,
     description:
@@ -30,7 +30,7 @@ const testimonials = [
     getImageSrc: () => require("../images/r3.png"),
   },
   {
-    title: "Greek Salad 2",
+    title: "Person4",
     price: null,
     rating:3,
     description:

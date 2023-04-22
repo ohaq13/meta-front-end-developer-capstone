@@ -26,13 +26,13 @@ const specials = [
       "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
     getImageSrc: () => require("../images/bruchetta.jpg"),
   },
-  {
+  /*{
     title: "Greek Salad 2",
     price: "$12.99",
     description:
       "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
     getImageSrc: () => require("../images/greek-salad.png"),
-  },
+  },*/
 ];
 
 export default function Specials() {
