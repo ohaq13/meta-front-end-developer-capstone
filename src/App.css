@@ -2,10 +2,13 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  color: #495E58;
+  color: #495E58 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
-
-/* Typography */
 
 * {
   margin: 0;
@@ -18,7 +21,6 @@ body {
 }
 
 label {
-	font-family: 'Markazi', sans-serif;
 	font-size: 22px;
 	font-weight: 500;
 	line-height: 22px;
@@ -26,7 +28,6 @@ label {
 }
 
 .title {
-	font-family: 'Markazi Text', serif;
 	font-size: 64px;
 	font-weight: 500;
 	line-height: 77px;
@@ -37,7 +38,6 @@ label {
 }
 
 .subtitle {
-	font-family: 'Markazi Text', serif;
 	font-size: 40px;
 	font-weight: 400;
 	line-height: 48.01px;
@@ -49,7 +49,6 @@ label {
 
 .desc {
 	color: #FFFFFF;
-	font-family: 'Karla', sans-serif;
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 21px;
@@ -65,12 +64,15 @@ label {
 	color: #040404;
 	font-weight: 600;
 	text-decoration: inherit;
-	font-family: 'Markazi', sans-serif;
+  padding: 0 2em 0 2em;
+  display: block;
 }
-
+.nav-item:hover {
+  background-color: #f4ce14;
+  transition: 0.25s;
+}
 .item-name,
 .reviewer-name {
-	font-family: 'Markazi', sans-serif;
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 22px;
@@ -92,7 +94,6 @@ label {
 
 .item-price,
 .reviewer-rating {
-	font-family: Karla;
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 19px;
@@ -103,7 +104,6 @@ label {
 
 .item-desc,
 .review-text {
-	font-family: 'Karla', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 19px;
@@ -114,7 +114,6 @@ label {
 }
 
 .delivery {
-	font-family: 'Karla', sans-serif;
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 19px;
@@ -126,7 +125,6 @@ label {
 }
 
 .testimonials-title {
-	font-family: 'Markazi Text', serif;
 	font-size: 36px;
 	font-weight: 500;
 	line-height: 43px;
@@ -145,7 +143,6 @@ label {
 }
 
 .desc-text {
-	font-family: Karla;
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 23px;
@@ -171,8 +168,8 @@ header {
 
 nav {
 	display: flex;
-	gap: 1em;
   position: relative;
+  line-height: 4.5;
 }
 
 .mobile-nav {
@@ -193,11 +190,10 @@ main {
 }
 
 form {
-	background-color: #faecdc;
-	width: 65%;
+	/*background-color: #faecdc;*/
+	width: 100%;
 	margin-inline: auto;
 	text-align: center;
-	padding: 2em 1em;
 	margin-bottom: 1.5em;
 	border-radius: 20px;
 }
@@ -222,15 +218,21 @@ input[type="text"],
 input[type="number"],
 select {
 	color: #333;
-	background-color: #f7f7f7;
+	/*background-color: #f7f7f7;*/
 	border: 2px solid #ccc;
 	border-radius: 5px;
-	padding: 10px;
 	font-size: 16px;
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-	margin-inline: 0.5em;
 }
 
+
+.css-y20koa{
+  padding: 0% !important;
+}
+
+.css-egzglv{
+  color: #495e57 !important;;
+}
 .hero {
 	background-color: #495E57;
 }
@@ -359,7 +361,6 @@ select {
 	border: none;
 	outline: none;
 	border-radius: 16px;
-	font-family: 'Roboto', sans-serif;
 	color: #040404;
 	font-size: 18px;
 	font-weight: 400;
@@ -380,6 +381,11 @@ select {
 
 /* Media queries */
 @media (max-width: 822px) {
+
+  .chakra-stack .css-1xfwgak{
+    width:100vw;
+  }
+
 	.title {
 		font-size: 50px;
 		line-height: 60px;
@@ -438,17 +444,8 @@ select {
 
   .nav.active {
     height: 100%;
-    padding: 0.5em 1.5em;
+    padding:0em 2em 0em 0em;
   }
-
-  .nav-item {
-    display: block;
-    margin: 1rem 0;
-  }
-
-	form {
-		width: 80%;
-	}
 
 	.btn {
 		padding: 0.8em;
@@ -547,7 +544,6 @@ select {
 		padding: 6px;
 		font-size: 16px;
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-		margin-inline: 0.5em;
 	}
 }
 

@@ -14,12 +14,12 @@ export default function Nav() {
         {isOpen ? <FaRegTimesCircle /> : <FaGripLines />}
       </div>
       <nav className={`nav ${isOpen ? 'active' : ''}`} onClick={toggleNav}>
-        <Link to="/" className="nav-item">HOME</Link>
-        <Link to="/about" className="nav-item">ABOUT</Link>
-        <Link to="/menu" className="nav-item">MENU</Link>
-        <Link to="/booking" className="nav-item">RESERVATIONS</Link>
-        <Link to="/orderonline" className="nav-item">ORDER ONLINE</Link>
-        <Link to="/login" className="nav-item">LOGIN</Link>
+        <Link to="/" className="nav-item">Home</Link>
+        <Link to="/about" className="nav-item">About</Link>
+        <Link to="/menu" className="nav-item">Menu</Link>
+        <Link to="/booking" className="nav-item">Reservations</Link>
+        <Link to="/orderonline" className="nav-item">Order Online</Link>
+        <Link to="/login" className="nav-item">Login</Link>
       </nav>
       </>
     )
