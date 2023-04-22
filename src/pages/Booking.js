@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState,  useReducer } from "react";
 import { fetchAPI, submitAPI } from "../api/api"
-import { useNavigate } from "react-router-dom";
+
 
 import {
     Box,
@@ -13,13 +13,9 @@ import BookingForm from '../components/BookingForm';
 
 const Booking = () => {
     const [date, setDate] = useState(new Date())
-    const navigate = useNavigate();
+   // const navigate = useNavigate();
     const submitForm = formData => {
         const isSubmitted = submitAPI(formData);
-
-        if (isSubmitted) {
-            navigate("/booking-confirmed");
-        }
     }
 
     const initializeTimes = d => {
@@ -32,7 +28,6 @@ const Booking = () => {
     }
     const [    availableTimes,     dispatch  ] = useReducer(updateTimes,  initializeTimes(date));
 
-   // const [ availableTimes, dispatch] = useReducer(updateTimes,initializeTimes);
 
     return (
 
@@ -42,7 +37,7 @@ const Booking = () => {
             spacing={2}
         >
             <VStack w="700px" p={2} alignItems="flex-start">
-                <Heading as="h1" id="contactme-section" colorScheme="none">
+                <Heading data-testid="table-reservation" as="h1" id="contactme-section" colorScheme="none">
                     Table Reservation
                 </Heading>
                 <Box p={2} rounded="md" w="100%">

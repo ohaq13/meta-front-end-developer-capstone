@@ -19,7 +19,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
     console.log(availableTimes)
     const minimumDate = new Date().toISOString().split('T')[0];
     const {isLoading, response, submit} = useSubmit();
-    const { onOpen } = useAlertContext();
+    const  {onOpen}  = useAlertContext();
    // const [minDate, setDate] = useState(minimumDate);
     const options =  availableTimes.map(time => <option key={time}>{time}</option>);
 
@@ -93,7 +93,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
                 </Select>
               </FormControl>
 
-              <Button type="submit" colorScheme="yellow" width="full" aria-label="On Click">
+              <Button data-testid="booking-submit" type="submit" colorScheme="yellow" width="full" aria-label="On Click">
                 Make Your reservation
                 {isLoading? <Spinner m={2} color='red.500' />:null}
               </Button>

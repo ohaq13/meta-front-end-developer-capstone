@@ -25,7 +25,7 @@ function Alert() {
       <AlertDialogOverlay>
         <AlertDialogContent py={10} backgroundColor={isSuccess ? '#EDEFEE ' : '#EDEFEE'}>
           <AlertDialogHeader fontSize="lg" fontWeight="bold" >
-            {isSuccess ? 'submission Successful!' : 'submission Failed!'}
+            {isSuccess ? 'Submission Successful!' : 'Submission Failed!'}
           </AlertDialogHeader>
           <AlertDialogBody style={{textAlign: 'center'}}>{message}</AlertDialogBody>
         </AlertDialogContent>
